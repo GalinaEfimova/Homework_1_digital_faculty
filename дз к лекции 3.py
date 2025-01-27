@@ -24,9 +24,9 @@ print(from_dict)
 # 2. Привести различные способы создания объектов типа DataFrame
 
 # Через объекты Series
-s1 = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
-s2 = pd.Series([4, 5, 6], index=['a', 'b', 'c'])
-from_series = pd.DataFrame({'column1': s1, 'column2': s2})
+s1 = pd.Series([1, 2, 3], name = 'a')
+s2 = pd.Series([4, 5, 6], name = 'b')
+from_series = pd.DataFrame({s1.name: s1, s2.name: s2})
 print(from_series)
 
 # Через список словарей
